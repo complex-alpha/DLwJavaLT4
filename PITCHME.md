@@ -1,11 +1,12 @@
-# JavaでDeep Learning（コーディング編）
+# JavaでDeep Learning
+# （コーディング編）
 
 ---
 ## 前回まで
 ### JavaでもDeepLearningはできる。
-必要なライブラリ(jar)はmavenで用意できる。  
-Gradle, SBT, Leiningenでも可能  
--> pom.xmlを書き換えたら、CPU/GPUを簡単に切替可能。  
+必要なライブラリ(jar)はmavenで用意できる。  
+※ Gradle, SBT, Leiningenでも可能   
+-> pom.xmlで、CPU/GPUを簡単に切替可能。  
 
 ---
 ## 必要な処理手順
