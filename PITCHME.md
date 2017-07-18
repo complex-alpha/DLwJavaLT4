@@ -6,6 +6,10 @@
 #### JavaでもDeepLearningはできる。
 必要なライブラリ(jar)はmavenで用意できる。  
 ※ Gradle, SBT, Leiningenでも可能   
+
+
+
+
 -> pom.xmlで、CPU/GPUを簡単に切替可能。  
 
 ---
@@ -35,7 +39,8 @@ CSVを一度出力する。  
 
 
 Stream API (Java8)が便利。   
-(DeepLearningでなくても、機械学習用のデータ編集に向いている。)
+(DeepLearningでなくても、    
+機械学習用のデータ編集に向いている。)
 
 +++
 ##### Stream APIメソッド
@@ -46,6 +51,7 @@ Stream API (Java8)が便利。
 |min/max(Comparator<? super T> comparator)|最小値/最大値|
 |reduce(BinaryOperator<T> accumulator)|合計や累積など|
 
++++
 CSVを用意したら↓の要領で読込
 ```
 int numLinesToSkip = 1;// ヘッダなどでスキップする行数
