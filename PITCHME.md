@@ -1,41 +1,39 @@
-# JavaでDeep Learning
-# （コーディング編）
+## JavaでDeep Learning
+## （コーディング編）
 
 ---
-## 前回まで
-### JavaでもDeepLearningはできる。
+### 前回まで
+#### JavaでもDeepLearningはできる。
 必要なライブラリ(jar)はmavenで用意できる。  
 ※ Gradle, SBT, Leiningenでも可能   
 -> pom.xmlで、CPU/GPUを簡単に切替可能。  
 
 ---
-## 必要な処理手順
+### 必要な処理手順
 1. データの用意
 2. 学習
 3. 評価・適用
 
 ---
-## データの用意
+### データの用意
 
 ##### Irisの例（Rより抜粋）
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 |--:|--:|--:|--:|--|
 |5.1|3.5|1.4|0.2|setosa|
-|4.9|3.0|1.4|0.2|setosa|
 |7.0|3.2|4.7|1.4|versicolor|
-|6.4|3.2|4.5|1.5|versicolor|
 |6.3|3.3|6.0|2.5|virginica|
 |5.8|2.7|5.1|1.9|virginica|
 
 -> こんな形のデータを用意する必要がある。
 
 ---
-## データの用意
+### データの用意
 直接、配列を用意してもよいが、CSVを一度出力する。  
 Stream API (Java8)が便利。
 (DeepLearningでなくても、機械学習用のデータ編集に向いている。)
 
-#### Stream APIメソッド
+##### Stream APIメソッド
 |Method|用途|
 |--|--|
 |distinct()|重複削除|
@@ -61,7 +59,7 @@ try (RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
 ```
 
 ---
-## 学習 (設定)
+### 学習 (設定)
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
@@ -102,7 +100,7 @@ long seed = 123;
 ```
 
 ---
-## 学習
+### 学習
 ```
 // run the model
 MultiLayerNetwork model = new MultiLayerNetwork(conf);
@@ -112,7 +110,7 @@ model.setListeners(new ScoreIterationListener(100));
 model.fit(trainingData);
 ```
 
-## 評価
+### 評価
 ```
 // evaluate the model on the test set
 // evaluate the model on the test set
