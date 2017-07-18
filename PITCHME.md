@@ -1,4 +1,4 @@
-## JavaでDeep Learning
+## JavaでDeepLearning
 ## （コーディング編）
 
 ---
@@ -16,7 +16,6 @@
 
 ---
 ### データの用意
-
 ##### Irisの例（Rより抜粋）
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 |--:|--:|--:|--:|--|
@@ -29,10 +28,11 @@
 
 ---
 ### データの用意
-直接、配列を用意してもよいが、CSVを一度出力する。  
-Stream API (Java8)が便利。
+メモリ上で処理してもよいが、CSVを一度出力する。  
+Stream API (Java8)が便利。   
 (DeepLearningでなくても、機械学習用のデータ編集に向いている。)
 
++++
 ##### Stream APIメソッド
 |Method|用途|
 |--|--|
