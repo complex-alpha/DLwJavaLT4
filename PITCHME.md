@@ -39,8 +39,7 @@ CSVを一度出力する。  
 
 
 Stream API (Java8)が便利。   
-(DeepLearningでなくても、    
-機械学習用のデータ編集に向いている。)
+(DL以外でも機械学習用のデータ編集にオススメ)
 
 +++
 ##### Stream APIメソッド
@@ -103,79 +102,43 @@ DataNormalization normalizer = new NormalizerStandardize();
 normalizer.fit(trainingData); // トレーニングデータから統計情報（平均/標準偏差）を収集
 normalizer.transform(trainingData); // トレーニングデータを正規化
 normalizer.transform(testData); // テストデータを正規化 (trainingから計算された統計を使用)
-
-final int numInputs = labelIndex;
-int outputNum = numClasses;
-int iterations = 10000;
-long seed = 123;
 ```
 
 ---
 ### 学習
 ```
 // run the model
+final int numInputs = labelIndex;
+int outputNum = numClasses;
+int iterations = 10000;
+long seed = 123;
 MultiLayerNetwork model = new MultiLayerNetwork(conf);
 model.init();
 model.setListeners(new ScoreIterationListener(100));
 
 model.fit(trainingData);
 ```
-
+---
 ### 評価
 ```
 // evaluate the model on the test set
-// evaluate the model on the test set
-			Evaluation eval = new Evaluation(3);
-			INDArray output = model.output(testData.getFeatureMatrix());
-			eval.eval(testData.getLabels(), output);
-			System.out.println(eval.stats());
-
-			long[][] summary = new long[7][7];
-			for (int i = 0; i < 7; i++) {
-				for (int j = 0; j < 7; j++) {
-
-					summary[i][j] = 0;
-				}
-			}
-
-			long countCorrect = 0;
-			long countAll = 0;
-
-			// パーセプトロンの使用
-			for (int i = 0; i < testData.numExamples(); i++) {
-
-				INDArray input = testData.get(i).getFeatureMatrix();// 入力
-				INDArray answer = testData.get(i).getLabels();// 答え
-				INDArray predict = model.output(input, false);// 予測
-
-				System.out.println("result" + i);
-				// System.out.println(" input : " + input);
-				System.out.println(" predict : " + predict + " / " + maxIndex(predict));
-				System.out.println(" answer : " + answer + " / " + maxIndex(answer));
-				System.out.flush();
-
-				summary[maxIndex(predict)][maxIndex(answer)]++;
-
-				countAll++;
-
-				if (maxIndex(predict) == maxIndex(answer)) {
-					countCorrect++;
-				}
-			}
-
-			for (int i = 0; i < 7; i++) {
-				for (int j = 0; j < 7; j++) {
-
-					System.out.print(summary[i][j]);
-					System.out.print("\t");
-				}
-
-				System.out.println();
-			}
-
-			System.out.print(countCorrect);
-			System.out.print("\t");
-			System.out.print(countAll);
-
-			ModelSerializer.writeModel(model, modelFile, true);
+Evaluation eval = new Evaluation(3);
+INDArray output = model.output(testData.getFeatureMatrix());
+eval.eval(testData.getLabels(), output);
+System.out.println(eval.stats());
 ```
++++
+```
+==========================Scores========================================
+ Accuracy:        0.3333
+ Precision:       0.8333
+ Recall:          0.5778
+ F1 Score:        0.6824
+========================================================================
+```
+|用語|意味|
+|--|--|
+|Accuracy|正解率|
+|Precision|適合率|
+|Recall|再現率|
+|F1 Score|F値（適合率と再現率の調和平均）|
