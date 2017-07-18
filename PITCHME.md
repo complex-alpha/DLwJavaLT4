@@ -3,9 +3,9 @@
 ---
 ## 前回まで
 ### JavaでもDeepLearningはできる。
-必要なライブラリ(jar)はmavenで
-Gradle, SBT, Leiningenでも可  
--> pom.xmlを書き換えたら、CPU/GPUを簡単に切り替え。
+必要なライブラリ(jar)はmavenで用意できる。  
+Gradle, SBT, Leiningenでも可能  
+-> pom.xmlを書き換えたら、CPU/GPUを簡単に切替可能。  
 
 ---
 ## 必要な処理手順
@@ -30,10 +30,11 @@ Gradle, SBT, Leiningenでも可  
 
 ---
 ## データの用意
-直接、配列を用意してもよいが、CSVを  
+直接、配列を用意してもよいが、CSVを一度出力する。  
 Stream API (Java8)が便利。
 (DeepLearningでなくても、機械学習用のデータ編集に向いている。)
 
+#### Stream APIメソッド
 |Method|用途|
 |--|--|
 |distinct()|重複削除|
