@@ -3,7 +3,7 @@
 ---
 ## 前回まで
 ### JavaでもDeepLearningはできる。
-必要なライブラリ(jar)はmavenで用意できる。  
+必要なライブラリ(jar)はmavenで用意できる。  
 Gradle, SBT, Leiningenでも可能  
 -> pom.xmlを書き換えたら、CPU/GPUを簡単に切替可能。  
 
