@@ -89,7 +89,7 @@ MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .pretrain(false)
     .build();
 ```
-
++++
 ```
 DataSet allData = iterator.next();
 allData.shuffle();
