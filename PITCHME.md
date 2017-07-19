@@ -180,4 +180,4 @@ INDArray predict = model.output(input, false);// 予測
 ---
 ### まとめ
 結構手間がかかる。  
-データ編集にはJava8で導入されたStream APIがオススメ。  
+データ編集にはStream APIがオススメ。  
