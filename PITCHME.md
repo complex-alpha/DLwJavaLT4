@@ -1,9 +1,12 @@
-JavaでDeepLearning
+JavaでDeepLearning  
 （コーディング編）
 
 ---
+
+
+---
 ### 前回まで
-#### JavaでもDeepLearningはできる。
+JavaでもDeepLearningはできる。  
 必要なライブラリ(jar)はmavenで用意できる。  
 ※ Gradle, SBT, Leiningenでも可能   
 
