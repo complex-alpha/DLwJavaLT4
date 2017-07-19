@@ -4,7 +4,11 @@ JavaでDeepLearning
 ---
 <table border="1">
   <tr>
-    <td>Test<td>
+    <td>
+      <img src="https://photos-3.dropbox.com/t/2/AACs8LWHQmxEUqb5qkLV3SKUlx4ZBxkffqmnDgY2s3D9uA/12/172232240/jpeg/32x32/3/1500454800/0/2/2017-07-15%2015.51.17.jpg/EIifm4MBGOD-ZyACKAI/Qxtr24nIuf2wFq9xIqifA9RSWxiMXQBS3BwLrsp0ksc?dl=0&size=2048x1536&size_mode=3">
+    </td>
+    <td>
+    </td>
   </tr>
 </table>
 
