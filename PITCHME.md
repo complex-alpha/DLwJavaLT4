@@ -37,6 +37,7 @@ JavaでもDeepLearningはできる。
 ---
 ### データの用意
 Irisの例（Rより抜粋）
+
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 |--:|--:|--:|--:|--|
 |5.1|3.5|1.4|0.2|setosa|
