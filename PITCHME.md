@@ -86,7 +86,7 @@ try (RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
 
 ---
 ### 学習 (設定)
-![DL](https://github.com/complex-alpha/DLwJavaLT4/blob/master/genericDNN.png?raw=true =100x)
+<img src="https://github.com/complex-alpha/DLwJavaLT4/blob/master/genericDNN.png?raw=true" width="200">
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
