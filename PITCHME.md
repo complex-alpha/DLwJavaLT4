@@ -1,4 +1,3 @@
-##
 JavaでDeepLearning
 （コーディング編）
 
