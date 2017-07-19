@@ -130,10 +130,6 @@ normalizer.transform(testData); // テストデータを正規化 (trainingか�
 ### 学習
 ```
 // run the model
-final int numInputs = labelIndex;
-int outputNum = numClasses;
-int iterations = 10000;
-long seed = 123;
 MultiLayerNetwork model = new MultiLayerNetwork(conf);
 model.init();
 model.setListeners(new ScoreIterationListener(100));
