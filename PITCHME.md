@@ -164,6 +164,7 @@ System.out.println(eval.stats());
 |F1 Score|F値（適合率と再現率の調和平均）|
 
 +++
+#### 学習したモデルを保存
 ```
 ModelSerializer.writeModel(model, modelFile, true);
 ```
@@ -174,3 +175,8 @@ INDArray input = testData.get(i).getFeatureMatrix();// 入力
 INDArray answer = testData.get(i).getLabels();// 答え
 INDArray predict = model.output(input, false);// 予測
 ```
+
+---
+### まとめ
+結構手間がかかる。  
+データ編集にはJava8で導入されたStream APIがオススメ。  
