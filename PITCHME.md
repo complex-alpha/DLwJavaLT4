@@ -2,6 +2,7 @@ JavaでDeepLearning
 （コーディング編）
 
 ---
+### 自己紹介
 <table border="1">
   <tr>
     <td>
