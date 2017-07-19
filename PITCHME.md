@@ -2,7 +2,11 @@ JavaでDeepLearning
 （コーディング編）
 
 ---
-
+<table border="1">
+  <tr>
+    <td>Test<td>
+  </tr>
+</table>
 
 ---
 ### 前回まで
