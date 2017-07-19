@@ -6,7 +6,7 @@ JavaでDeepLearning
 <table border="1">
   <tr>
     <td>
-      <img src="https://www.dropbox.com/s/mnc9smabb4ws02r/2017-07-15%2015.51.17.jpg?dl=0" height="200">
+      <img src="https://github.com/complex-alpha/DLwJavaLT4/blob/master/luna.jpg?raw=true" height="200">
     </td>
     <td>
       Yusuke Shinohara<br>
