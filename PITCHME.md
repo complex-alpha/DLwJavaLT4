@@ -1,5 +1,6 @@
-## JavaでDeepLearning
-## （コーディング編）
+##
+JavaでDeepLearning
+（コーディング編）
 
 ---
 ### 前回まで
