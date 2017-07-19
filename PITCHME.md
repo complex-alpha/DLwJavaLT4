@@ -36,7 +36,7 @@ JavaでもDeepLearningはできる。
 
 ---
 ### データの用意
-##### Irisの例（Rより抜粋）
+Irisの例（Rより抜粋）
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 |--:|--:|--:|--:|--|
 |5.1|3.5|1.4|0.2|setosa|
@@ -86,7 +86,9 @@ try (RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
 
 ---
 ### 学習 (設定)
-<img src="https://github.com/complex-alpha/DLwJavaLT4/blob/master/genericDNN.png?raw=true" width="200">
+<img src="https://github.com/complex-alpha/DLwJavaLT4/blob/master/genericDNN.png?raw=true" width="400">
+
++++
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
@@ -159,3 +161,15 @@ System.out.println(eval.stats());
 |Precision|適合率|
 |Recall|再現率|
 |F1 Score|F値（適合率と再現率の調和平均）|
+
++++
+```
+ModelSerializer.writeModel(model, modelFile, true);
+```
+---
+### 適用
+```
+INDArray input = testData.get(i).getFeatureMatrix();// 入力
+INDArray answer = testData.get(i).getLabels();// 答え
+INDArray predict = model.output(input, false);// 予測
+```
